@@ -6,7 +6,7 @@ const SKILL_NAME = 'Movie Match';
 const HELP_MESSAGE = 'You can say give me an action movie. You can also ask for comedy, drama, and horror or, you can say exit... What can I help you with?';
 const HELP_REPROMPT = 'You can say give me a comedy movie. You can also say - give me a horror movie. What would you like?';
 const STOP_MESSAGE = 'Okay. See you soon.';
-// imdb categories listed here for movies
+// imdb categories listed here for movies. Move movies and tvs to database.
 var movies = {
     "action":[
         {"title":"The Dark Knight","year":"2008","summary":"superhero film directed, produced, and co-written by Christopher Nolan. Featuring the DC Comics character Batman, the film is the second part of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins."},
@@ -18,7 +18,9 @@ var movies = {
         {"title":"The Mask","year":"1994","summary":"American superhero comedy film directed by Charles Russell, produced by Bob Engelman, and written by Mike Werb, based on the comic series of the same name published by Dark Horse Comics."},
         {"title":"Dumb and Dumber","year":"1994","summary":"an American comedy road film starring Jim Carrey and Jeff Daniels. The film tells the story of Lloyd Christmas and Harry Dunne, two unintelligent but well-meaning friends from Providence, Rhode Island."}
     ],
-    "superhero":[],
+    "superhero":[
+        {"title":"Joker","year":"2019","summary":'In Gotham City, mentally-troubled comedian Arthur Fleck embarks on a downward-spiral of social revolution and bloody crime. This path brings him face-to-face with his infamous alter-ego: "The Joker"'}
+    ],
   	"action-comedy":[],
   	"comedy-romance":[],
   	"fantasy":[],
@@ -34,7 +36,7 @@ var movies = {
 };
 
 // imdb categories listed here for tv. 
-note that year is replaced with years, and input is string to account for multiple years of a show running
+//note that year is replaced with years, and input is string to account for multiple years of a show running
 var tvs = {
     "action":[],
     "comedy":[
